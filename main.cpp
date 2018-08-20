@@ -4,6 +4,7 @@
 
 #include "GameObject.hpp"
 #include "RotatingRect.hpp"
+#include "Character.hpp"
 
 int main()
 {
@@ -11,6 +12,7 @@ int main()
     window.setFramerateLimit(60);
 
     RotatingRect rect;
+    Character character;
 
     sf::Clock clock;
     sf::Time delta;
@@ -28,10 +30,12 @@ int main()
             }
         }
 
-       rect.update(delta);
+        rect.update(delta);
+        character.update(delta);
 
         window.clear(sf::Color::Black);
         rect.draw(window);
+        character.draw(window);
         window.display();
     }
 
