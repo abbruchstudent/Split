@@ -6,11 +6,9 @@
 class GameObject
 {
 public:
-    GameObject(){}
-    virtual ~GameObject(){}
-
-    virtual void update(sf::Time delta){}
-    virtual void draw(sf::RenderWindow& window){}
+    virtual ~GameObject() = default;
+    virtual void update(sf::Time delta) = 0;
+    virtual void draw(sf::RenderWindow& window) = 0;
 };
 
 #endif // GAMEOBJECT_HPP
