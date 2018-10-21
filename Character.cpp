@@ -1,7 +1,7 @@
 #include "Character.hpp"
 
 Character::Character()
-    : rect(sf::Vector2f(50, 50))
+    : rect(sf::Vector2f(16, 16))
 {
     rect.setFillColor(sf::Color::Green);
 }

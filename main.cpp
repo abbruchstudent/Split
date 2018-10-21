@@ -5,14 +5,15 @@
 #include "GameObject.hpp"
 #include "RotatingRect.hpp"
 #include "Character.hpp"
+#include "Room.hpp"
 
 int main()
 {
     sf::RenderWindow window(sf::VideoMode(400,400), "Test");
     window.setFramerateLimit(60);
 
-    RotatingRect rect;
     Character character;
+    Room room;
 
     sf::Clock clock;
     sf::Time delta;
@@ -30,11 +31,10 @@ int main()
             }
         }
 
-        rect.update(delta);
         character.update(delta);
 
-        window.clear(sf::Color::Black);
-        rect.draw(window);
+        window.clear(sf::Color(160, 160, 255));
+        room.draw(window);
         character.draw(window);
         window.display();
     }
